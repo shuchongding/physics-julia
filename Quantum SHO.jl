@@ -18,7 +18,7 @@ colors = palette(:darkrainbow, levels)
 p = plot(; leg = false, palette = colors, ylim = [0, levels + 1], framestyle = :origin, xlabel = L"x/\sqrt{\frac{\hbar}{m\omega}}", ylabel = L"E/\hbar\omega")
 
 for i in 1:levels
-    N[i] = sqrt(sum(Φ[i]^2))
+    N[i] = sqrt(sum(Φ[i]^2)).py
     plot!(p, Φ[i]/N[i] + ϵ[i], annotation = (10.5, ϵ[i], ("$i", 10, colors[i])))
 end
 
